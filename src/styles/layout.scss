@@ -1,12 +1,19 @@
-.coniatner {
+.container {
     width: 100%;
     height: 100%
 }
-.flex-column {
+.no-margin {
+    padding: 0;
+    margin: 0;
+}
+.column {
     display: flex;
     flex-direction: column;
 }
-.flex-row {
+.row {
     display: flex;
     flex-direction: row;
+}
+.main-cell {
+    flex: 1 0;
 }
