@@ -1,19 +1,42 @@
 .container {
-    width: 100%;
-    height: 100%
+  width: 100%;
+  height: 100%;
 }
 .no-margin {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
 }
 .column {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 .row {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 .main-cell {
-    flex: 1 0;
+  flex: 1 0;
+}
+
+.test {
+  background-color: red;
+}
+
+.spaced-l-s {
+  margin-left: 8px;
+}
+.spaced-l {
+  margin-left: 16px;
+}
+.spaced-l-t {
+  margin-left: 24px;
+}
+.spaced-t-s {
+  margin-top: 8px;
+}
+.spaced-t {
+  margin-top: 16px;
+}
+.spaced-t-t {
+  margin-top: 24px;
 }

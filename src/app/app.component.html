@@ -1,16 +1,13 @@
 <div class="row container">
-    <div class="column side-nav">
-        <!-- left-menu -->
-        test
+  <div class="column side-nav">
+    <app-side-nav></app-side-nav>
+  </div>
+  <div class="column main-cell">
+    <div class="row top-bar">
+      <app-top-bar></app-top-bar>
     </div>
     <div class="column main-cell">
-        <div class="row top-bar">
-            <!-- top-bar -->
-            test1
-        </div>
-        <div class="column main-cell">
-            <!-- main-container -->
-            test2
-        </div>
+      <router-outlet></router-outlet>
     </div>
+  </div>
 </div>

@@ -1,0 +1,12 @@
+@import "layout";
+@import "variables";
+
+:host {
+  @extend .container;
+}
+
+.top-bar {
+  background: $color-primary-1;
+  background: linear-gradient(90deg, $color-primary-1 30%, $color-secondary-1 100%);
+  border-bottom: 2px solid $color-primary-1;
+}

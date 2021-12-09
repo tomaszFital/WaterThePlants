@@ -1,0 +1,18 @@
+<div class="box-shadow-1 column container">
+  <div class="logo">
+    <img class="spaced-l-s" src="../../../assets/logos/web-logo.svg">
+  </div>
+  <div class="links main-cell">
+    <ng-container *ngFor="let menuLink of menuLinks">
+      <a class="item-link" [ngClass]="url === '/' + menuLink.href ? 'active' : 'inactive'" *ngIf="menuLink.visible"
+        [routerLink]="menuLink.href">
+        {{ menuLink.name }}</a>
+    </ng-container>
+  </div>
+  <div class="logout">
+    <a class="item-link">Wyloguj</a>
+  </div>
+  <div class="footer spaced-t-s">
+    <app-footer></app-footer>
+  </div>
+</div>

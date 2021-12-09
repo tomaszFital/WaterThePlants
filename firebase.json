@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/water-the-plants",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

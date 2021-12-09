@@ -1,0 +1,33 @@
+@import "layout";
+@import "variables";
+:host {
+  @extend .container;
+}
+
+.logo {
+  height: 126px;
+  img {
+    height: 126px;
+  }
+}
+.footer {
+  height: 20px;
+}
+.links {
+  margin-top: 40px;
+}
+.item-link {
+  display: block;
+  width: calc(100% - 24px);
+  height: 50px;
+  line-height: 50px;
+  padding-left: 24px;
+  font-size: 24px;
+  &.active {
+    color: $color-primary-1;
+    background-color: $color-secondary-1;
+  }
+  &.inactive {
+    color: $color-black;
+  }
+}
