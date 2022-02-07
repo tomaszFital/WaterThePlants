@@ -1,1 +1,15 @@
-<p>my-plants works!</p>
+<div class="column main-page">
+  <h1>Dzisiaj do podlania</h1>
+  <div class="line-title"></div>
+  <div class="page row">
+    <ng-container *ngIf="(myPlants$ | async) as myPlants; else waiter">
+      <app-plant *ngFor="let plant of myPlants" [plant]="plant"></app-plant>
+    </ng-container>
+    <ng-template #waiter>
+      Lista się ładuje...
+    </ng-template>
+  </div>
+</div>
+<p class="spaced-l-l spaced-t">Przytrzymaj szare ikony, by podlać</p>
+<button class="spaced-t add-button" appButton (click)="navTo('addPlant')">Dodaj roślinę</button>
+<button class="mobile-show" style="margin: 0 40px" appButton (click)="navTo('')">Start</button>

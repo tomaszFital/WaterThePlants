@@ -1,0 +1,7 @@
+.mobile-show { display:none !important }
+@media screen and (max-width: 880px) {
+  .mobile-hide { display: none !important }
+  .mobile-row { flex-direction: row !important }
+  .mobile-column { flex-direction: column !important }
+  .mobile-show { display: block !important}
+}

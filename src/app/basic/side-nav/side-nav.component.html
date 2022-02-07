@@ -9,8 +9,8 @@
         {{ menuLink.name }}</a>
     </ng-container>
   </div>
-  <div class="logout">
-    <a class="item-link">Wyloguj</a>
+  <div class="logout" *ngIf="menuLinks?.length > 0 || true">
+    <a class="item-link clickable" (click)="signOut()">Wyloguj</a>
   </div>
   <div class="footer spaced-t-s">
     <app-footer></app-footer>

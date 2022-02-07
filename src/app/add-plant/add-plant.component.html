@@ -1,0 +1,26 @@
+<div class="column" *ngIf="!adding">
+
+  <div class="row" [formGroup]="plantForm">
+    <div class="column form-column">
+      <p>Nazwa rośliny</p>
+      <input type="text" appInputText formControlName="name">
+      <p class="spaced-t">Co ile podlewać</p>
+      <input type="number" appInputText formControlName="waterDays">
+      <p class="spaced-t">Typ rośliny</p>
+      <select appInputText formControlName="type">
+        <option value="inside">Roślina wewnętrzna</option>
+        <option value="outside">Roslina zewnętrzna</option>
+      </select>
+    </div>
+    <div class="column form-column spaced-l">
+      <p>Opis</p>
+      <textarea appInputText formControlName="description"></textarea>
+    </div>
+  </div>
+  <p class="spaced-t">
+    <span *ngIf="plantForm.invalid">Uzupełnij formularz poprawnymi danymi</span>
+  </p>
+  <button class="spaced-t" appButton *ngIf="plantForm.valid" (click)="save()">Dodaj roślnię</button>
+  <button class="spaced-t" appButtonOut (click)="navTo('/myPlants')">Anuluj</button>
+</div>
+<div *ngIf="adding">Dodaję roślinę! Zaraz zostaniesz przeniesiony!</div>

@@ -1,6 +1,7 @@
 {
   "hosting": {
-    "public": "dist/water-the-plants",
+    "site": "water-the-plants-tpf",
+    "public": "public",
     "ignore": [
       "firebase.json",
       "**/.*",

@@ -1,0 +1,17 @@
+<div class="row plant" (mousedown)="waterPlant()" (mouseup)="stopWatering()">
+  <div class="icon-circle" [class.watering]="watering" [class.watered]="!watered">
+    <img src="./../../../assets/icons/plant-small.svg">
+  </div>
+  <div class="column spaced-l">
+    <div class="plant-title">
+      <h3>{{plant.name}}</h3>
+    </div>
+    <div class="plant-info">
+      {{ plant.type | plantType }}
+    </div>
+    <div class="plant-desc">
+      {{ plant.description }}
+    </div>
+    <p class="delete-plant" (click)="deletePlant()">Usuń roślinę</p>
+  </div>
+</div>

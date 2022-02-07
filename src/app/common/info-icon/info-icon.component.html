@@ -1,0 +1,12 @@
+<div class="info-container column">
+  <div class="img-content row">
+    <ng-content select="img"></ng-content>
+  </div>
+  <div class="title-content">
+    <ng-content select="[title]"></ng-content>
+  </div>
+  <div class="desc-content">
+    <ng-content select="[desc]"></ng-content>
+  </div>
+  <div class="filled-container" [style]="'height:' + fillPercent + '%'"></div>
+</div>

@@ -1,0 +1,10 @@
+<div class="login-column column">
+  <p>Username:</p>
+  <input type="text" [(ngModel)]="authLogin" name="authLogin" appInputText>
+  <p class="spaced-t">Password:</p>
+  <input type="password" [(ngModel)]="authPass" name="authPass" appInputText>
+  <button appButton class="spaced-t-l" (click)="signIn()">Login</button>
+  <p>{{this.error}}</p>
+
+  <a class="spaced-t google-button" (click)="googleLogin()">Google Login</a>
+</div>

@@ -1,0 +1,21 @@
+@import "variables";
+
+:host {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-column {
+  justify-content: center;
+  align-items: center;
+  button {
+    width: 100%;
+  }
+  .google-button {
+    color: $color-black;
+    cursor: pointer;
+  }
+}

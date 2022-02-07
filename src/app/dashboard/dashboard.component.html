@@ -1,1 +1,17 @@
-<p>dashboard works!</p>
+<div class="row spaced-t-l main-cell mobile-column">
+  <app-info-icon class="main-cell" [fillPercent]="42">
+    <img src="./../../../assets/icons/plant.svg">
+    <p title>Szczęśliwe rośliny</p>
+    <p desc>Podlano 6 z 42 roślin (24%)</p>
+  </app-info-icon>
+  <app-info-icon class="main-cell second-info" [fillPercent]="80">
+    <img src="./../../../assets/icons/sloneczko.svg">
+    <p title>Naslonecznienie dziś</p>
+    <p desc>(80%)</p>
+  </app-info-icon>
+</div>
+<div class="spaced-t-l column">
+  <button class="spaced-t" appButton (click)="navTo('myPlants')">Przeglądaj rośliny</button>
+  <button class="spaced-t" appButton (click)="navTo('addPlant')">Dodaj roślinę</button>
+  <button class="spaced-t mobile-show" appButtonOut (click)="logout()">Wyloguj</button>
+</div>

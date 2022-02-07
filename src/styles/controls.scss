@@ -1,8 +1,40 @@
 @import "variables";
 
 .box-shadow-1 {
-  box-shadow: 2px 2px 12px 0px #8a8a8a;
+  box-shadow: 2px 2px 12px 0px $color-gray-2;
 }
 .box-shadow-2 {
-  box-shadow: 2px 2px 6px 0px #8a8a8a;
+  box-shadow: 2px 2px 6px 0px $color-gray-2;
+}
+
+[appButton] {
+  background-color: $color-primary-1;
+  border-radius: 10px;
+  border: none;
+  min-height: 50px;
+  font-size: 1.5em;
+  color: $color-white;
+  cursor: pointer;
+  @extend .box-shadow-2;
+}
+[appButtonOut] {
+  background: none;
+  border: 3px solid $color-primary-1;
+  border-radius: 10px;
+  min-height: 50px;
+  font-size: 1.5em;
+  color: $color-primary-1;
+  cursor: pointer;
+  @extend .box-shadow-2;
+}
+
+[appInputText] {
+  height: 40px;
+  border: 1px solid $color-black;
+  border-radius: 5px;
+  padding: 0 16px;
+}
+
+[perfectScrollbar] {
+  position: relative;
 }

@@ -1,5 +1,7 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnChanges, OnInit, SimpleChanges } from "@angular/core";
+import { AngularFireAuth } from "@angular/fire/auth";
 import { Router } from "@angular/router";
+// import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
 import { MenuLink, MenuLinksService } from "./menu-links.service";
 
 @Component({
@@ -7,20 +9,24 @@ import { MenuLink, MenuLinksService } from "./menu-links.service";
   templateUrl: "./side-nav.component.html",
   styleUrls: ["./side-nav.component.scss"]
 })
-export class SideNavComponent implements OnInit {
+export class SideNavComponent {
   menuLinks: MenuLink[];
   url: string;
+
   constructor(
     private menuLinkService: MenuLinksService,
     private router: Router,
+    private fireAuth: AngularFireAuth,
   ) {
     this.router.events.subscribe(() => {
       this.url = this.router.url;
+      this.menuLinks = this.menuLinkService.getMenuLinks();
     });
   }
 
-  ngOnInit(): void {
-    this.menuLinks = this.menuLinkService.getMenuLinks();
+  async signOut() {
+    localStorage.setItem('user', null);
+    await this.fireAuth.signOut();
+    this.router.navigateByUrl("login");
   }
-
 }

@@ -1,0 +1,46 @@
+@import "variables";
+
+.plant {
+  justify-items: center;
+  align-items: center;
+  .icon-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: $color-gray-3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.watered {
+      background-color: $color-primary-1;
+    }
+    &.watering {
+      animation: watering-anim 1s;
+    }
+  }
+  .plant-title {
+    h3 {
+      font-size: 1.3em;
+    }
+  }
+  .plant-desc {
+    color: $color-gray-3;
+    max-width: 200px;
+    overflow: hidden;
+    line-height: 21px;
+    max-height: 42px;
+  }
+  .delete-plant {
+    color: $color-error;
+    cursor: pointer;
+  }
+}
+
+@keyframes watering-anim {
+  from {
+    background-color: $color-gray-3;
+  }
+  to {
+    background-color: $color-secondary-1;
+  }
+}

@@ -1,0 +1,14 @@
+:host {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-column {
+  min-width: 300px;
+  textarea {
+    height: 194px;
+  }
+}
