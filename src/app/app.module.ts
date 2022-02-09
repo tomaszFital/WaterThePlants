@@ -21,7 +21,7 @@ import { AngularFireAuthModule, USE_EMULATOR as USE_AUTH_EMULATOR } from '@angul
 import { AngularFirestoreModule, USE_EMULATOR as USE_FIRESTORE_EMULATOR } from '@angular/fire/firestore';
 import { AngularFireFunctionsModule, USE_EMULATOR as USE_FUNCTIONS_EMULATOR } from '@angular/fire/functions';
 
-import { environment } from "src/environments/environment";
+import { environment } from "src/environments/environment.prod";
 import { AngularFireModule } from "@angular/fire";
 import { AddPlantComponent } from './add-plant/add-plant.component';
 // import { firebaseConfig } from "src/environments/environment.prod";

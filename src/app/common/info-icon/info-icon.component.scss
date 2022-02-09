@@ -1,10 +1,5 @@
 @import "variables";
 
-:host {
-  flex: unset;
-  max-height: 200px;
-}
-
 .info-container {
   min-height: 200px;
   height: 100%;
@@ -36,6 +31,10 @@
   }
 }
 @media screen and (max-width: 880px) {
+  :host {
+    flex: unset;
+    max-height: 200px;
+  }
   .info-container {
     // min-height: 100px;
     // height: 80%;

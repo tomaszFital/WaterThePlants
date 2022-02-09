@@ -17,7 +17,7 @@ export class MyPlantsService {
   ) { }
 
   items: Observable<any[]>;
-  getMyPlants() {
+  getMyPlants(): Observable<Plant[]> {
     return this.db.collection('plants', ref => ref.where('user', '==', JSON.parse(localStorage.getItem('user')).uid))
       .get()
       .pipe(map(result => convertSnaps(result)))
